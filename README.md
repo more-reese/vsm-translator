@@ -2,8 +2,8 @@
 
 A desktop app that keeps a plain-language process description and its BPMN 2.0 diagram in sync in both directions, and does the same for Viable System Model diagrams of an organization.
 
-<!-- ![Process mode: numbered steps on the left, the BPMN diagram they produce on the right](docs/screenshots/process-mode.png) -->
-<!-- ![Conflict dialog open with two differences, one carrying a written instruction](docs/screenshots/conflict-dialog.png) -->
+![Process mode: numbered steps on the left, the BPMN diagram they produce on the right, with the Offline translator active](docs/screenshots/process-mode.png)
+![Conflict dialog after editing the same two steps in the text and in the diagram: one row per disagreement, each with Keep text or Keep diagram](docs/screenshots/conflict-dialog.png)
 
 ## Why I built this
 
