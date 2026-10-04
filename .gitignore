@@ -1,0 +1,23 @@
+node_modules/
+dist/
+dist-electron/
+out/
+# build/ holds the app icons electron-builder packages from; keep those, ignore the rest.
+build/*
+!build/icon.icns
+!build/icon.png
+release/
+.next/
+coverage/
+*.log
+npm-debug.log*
+.env
+.env.*
+!.env.example
+.DS_Store
+.vscode/
+.idea/
+*.tsbuildinfo
+
+# Local agent tooling config (machine-specific paths)
+.claude/

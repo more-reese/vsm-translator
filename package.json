@@ -1,0 +1,51 @@
+{
+  "name": "vsm-translator",
+  "productName": "VSM Translator",
+  "version": "0.1.0",
+  "description": "Local-first translator between plain-language process descriptions, BPMN 2.0 diagrams, and Stafford Beer's Viable System Model.",
+  "author": "Matt Burke",
+  "license": "MIT",
+  "repository": "github:more-reese/vsm-translator",
+  "private": true,
+  "main": "dist-electron/main.cjs",
+  "scripts": {
+    "start": "node scripts/dev.mjs",
+    "dev": "node scripts/dev.mjs",
+    "web": "vite",
+    "build": "node scripts/build.mjs",
+    "icon": "node scripts/make-icon.mjs",
+    "typecheck": "tsc --noEmit",
+    "package": "npm run build && npx --yes electron-builder --mac --dir"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "bpmn-js": "^17.11.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "^44.1.0",
+    "esbuild": "^0.23.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
+  },
+  "build": {
+    "appId": "io.github.more-reese.vsmtranslator",
+    "productName": "VSM Translator",
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "build/icon.icns",
+      "target": "dir"
+    }
+  }
+}
